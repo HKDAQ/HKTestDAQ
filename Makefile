@@ -43,5 +43,5 @@ lib/libMyTools.so: lib/libStore.so include/Tool.h lib/libDataModel.so
 
 	cp UserTools/*.h include/
 	cp UserTools/Factory/*.h include/
-	g++  --shared -c UserTools/Factory/Factory.cpp -I include -L lib -lStore -lDataModel -o lib/libMyTools.so $(MyToolsInclude) $(MyToolsLib)
+	g++  --shared -c UserTools/Factory/Factory.cpp -I include -L lib -lStore -lDataModel -o lib/libMyTools.so $(MyToolsInclude) $(MyToolsLib)  $(ZMQLib) $(ZMQInclude)
 
