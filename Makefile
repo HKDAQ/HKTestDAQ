@@ -36,7 +36,7 @@ clean:
 lib/libDataModel.so: lib/libStore.so
 
 	cp DataModel/DataModel.h include/
-	g++ -c --shared DataModel/DataModel.cpp -I include -L lib -lStore -o lib/libDataModel.so $(DataModelInclude) $(DataModelLib)
+	g++ -c --shared DataModel/DataModel.cpp -I include -L lib -lStore -o lib/libDataModel.so $(DataModelInclude) $(DataModelLib) $(ZMQLib) $(ZMQInclude)
 
 
 lib/libMyTools.so: lib/libStore.so include/Tool.h lib/libDataModel.so
