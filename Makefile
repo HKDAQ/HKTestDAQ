@@ -1,15 +1,21 @@
 ToolDAQFrameworkPath=ToolDAQ/ToolDAQFramework
 
-ZMQLib= -L ToolDAQ/zeromq-4.0.7/lib -lzmq -L /usr/local/lib -lboost_date_time
-ZMQInclude= -I ToolDAQ/zeromq-4.0.7/include/ -I /usr/local/include/
+ZMQLib= -L ToolDAQ/zeromq-4.0.7/lib -lzmq 
+ZMQInclude= -I ToolDAQ/zeromq-4.0.7/include/ 
+
+BoostLib= -L /usr/local/lib -lboost_date_time
+BoostInclude= -I /usr/local/include/
+
 DataModelInclude =
 DataModelLib =
+
 MyToolsInclude =
 MyToolsLib =
 
 all: lib/libMyTools.so lib/libToolChain.so lib/libStore.so include/Tool.h  lib/libDataModel.so
 
-	g++ src/main.cpp -o main -I include -L lib -lStore -lMyTools -lToolChain -lDataModel -lpthread $(DataModelInclude) $(DataModelLib) $(MyToolsInclude) $(MyToolsLib) $(ZMQLib) $(ZMQInclude)
+	g++ src/main.cpp -o main -I include -L lib -lStore -lMyTools -lToolChain -lDataModel -lpthread $(DataModelInclude) $(DataModelLib) $(MyToolsInclude) $(MyToolsLib) $(ZMQLib) $(ZMQInclude)  $(BoostLib) $(BoostInclude)
+
 
 lib/libStore.so:
 
