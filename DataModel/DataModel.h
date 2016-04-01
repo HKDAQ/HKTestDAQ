@@ -8,7 +8,7 @@
 //#include "TTree.h"
 
 #include "Store.h"
-
+#include "Logging.h"
 #include <zmq.hpp>
 
 class DataModel{
@@ -21,6 +21,7 @@ class DataModel{
   //void AddTTree(std::string name,TTree *tree);
 
   Store vars;
+  Logging *Log;
 
   zmq::context_t* context;
 

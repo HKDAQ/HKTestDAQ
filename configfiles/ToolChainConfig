@@ -1,7 +1,7 @@
 #ToolChain dynamic setup file
 
 # Runtime Paramiters
-verbose 1
+verbose 9
 error_level 0
 remote_port 24000
 service_discovery_address 239.192.1.1
@@ -13,6 +13,6 @@ Tools_File configfiles/ToolsConfig
 
 #Run Type
 Inline 0
-Interactive 
-Remote 1
+Interactive 1 
+Remote 0
 
