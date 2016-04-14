@@ -1,2 +1,5 @@
 #include "DummyTool.cpp"
 #include "DiscoveryCheck.cpp"
+#include "TriggerOutput.cpp"  
+#include "WCSimASCIReader.cpp"
+#include "GPUProcessor.cpp" 
