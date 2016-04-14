@@ -1,0 +1,4 @@
+verbose 9
+tcpport 12345
+inproc Processor
+idport 90909
